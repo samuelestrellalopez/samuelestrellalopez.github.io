@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Libros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-green-400 font-mono antialiased flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-900 text-green-400 py-6 flex items-center justify-between px-8">
+        <div class="text-4xl font-bold">
+            <span>Buscador de Libros</span>
+        </div>
+        <form id="search-form" class="flex space-x-4 items-center" aria-label="Formulario de búsqueda de libros">
+            <input type="text" id="search-input" placeholder="Buscar..." class="px-4 py-2 bg-gray-800 text-white rounded-md border border-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 text-sm" />
+            <select id="search-by" class="px-4 py-2 bg-gray-800 text-white rounded-md border border-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 text-sm">
+                <option value="title">Título</option>
+                <option value="author">Autor</option>
+                <option value="isbn">ISBN</option>
+            </select>
+            <button type="submit" class="py-2 px-4 bg-green-500 text-black font-semibold rounded-md hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-300 text-sm">
+                Buscar
+            </button>
+        </form>
+    </header>
+
+    <!-- Contenedor de resultados -->
+    <div id="content" class="flex-grow">
+        <div id="results" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-8 py-6"></div>
+    </div>
+
+    <!-- Contenedor de paginación -->
+    <div id="pagination" class="flex justify-center mt-6 space-x-4 p-4"></div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-6 text-center mt-8">
+        <p class="text-sm">© 2025 Buscador de Libros. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

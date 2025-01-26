@@ -1,0 +1,121 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Estilo de los resultados */
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 40px;
+    flex-grow: 1;
+    transition: opacity 0.5s ease; /* Para animar la aparición de los resultados */
+}
+
+/* Cuadro del libro con animación */
+.book-item {
+    display: flex;
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, transform 0.6s; /* Animación de hover y rotación */
+    position: relative;
+    width: 100%;
+    height: 300px; /* Tamaño fijo para las tarjetas */
+    transform-style: preserve-3d;
+}
+
+.book-item:hover {
+    transform: scale(1.05) rotateY(180deg); /* Animación al pasar el mouse y al hacer hover */
+}
+
+.book-cover {
+    width: 100px;
+    height: 175px;
+    object-fit: cover;
+}
+
+.book-info {
+    flex-grow: 1;
+    padding: 10px;
+    color: white;
+}
+
+.book-info h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.book-info p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+/* Estilo de la tarjeta (front y back) */
+.book-front,
+.book-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.book-back {
+    transform: rotateY(180deg); /* La parte posterior de la tarjeta está girada */
+    background: #1a202c; /* Fondo oscuro para el reverso */
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilos para la card de libro */
+#book-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#book-card .bg-white {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+}
+
+#book-card.hidden {
+    display: none;
+}
+
+/* Botón para cerrar la tarjeta */
+#close-card {
+    background-color: #f44336;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#close-card:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilo de footer */
+footer {
+    background-color: #111111;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
