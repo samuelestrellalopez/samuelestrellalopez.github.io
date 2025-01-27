@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,32 +8,30 @@ body {
     height: 100vh;
 }
 
-/* Estilo de los resultados */
 #results {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 16px;
     margin-top: 40px;
     flex-grow: 1;
-    transition: opacity 0.5s ease; /* Para animar la aparición de los resultados */
+    transition: opacity 0.5s ease; 
 }
 
-/* Cuadro del libro con animación */
 .book-item {
     display: flex;
     background-color: #222;
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out, transform 0.6s; /* Animación de hover y rotación */
+    transition: transform 0.3s ease-in-out, transform 0.6s; 
     position: relative;
     width: 100%;
-    height: 300px; /* Tamaño fijo para las tarjetas */
+    height: 300px;
     transform-style: preserve-3d;
 }
 
 .book-item:hover {
-    transform: scale(1.05) rotateY(180deg); /* Animación al pasar el mouse y al hacer hover */
+    transform: scale(1.05) rotateY(180deg); 
 }
 
 .book-cover {
@@ -60,7 +57,6 @@ body {
     font-size: 12px;
 }
 
-/* Estilo de la tarjeta (front y back) */
 .book-front,
 .book-back {
     position: absolute;
@@ -72,8 +68,8 @@ body {
 }
 
 .book-back {
-    transform: rotateY(180deg); /* La parte posterior de la tarjeta está girada */
-    background: #1a202c; /* Fondo oscuro para el reverso */
+    transform: rotateY(180deg); 
+    background: #1a202c;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -81,7 +77,6 @@ body {
     justify-content: center;
 }
 
-/* Estilos para la card de libro */
 #book-card {
     display: flex;
     align-items: center;
@@ -98,7 +93,6 @@ body {
     display: none;
 }
 
-/* Botón para cerrar la tarjeta */
 #close-card {
     background-color: #f44336;
     border: none;
@@ -111,7 +105,6 @@ body {
     background-color: #d32f2f;
 }
 
-/* Estilo de footer */
 footer {
     background-color: #111111;
     color: #aaa;
