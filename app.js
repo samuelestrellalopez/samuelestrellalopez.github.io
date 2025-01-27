@@ -8,7 +8,7 @@ let currentPage = 1;
 let currentQuery = '';
 let currentSearchBy = 'title';
 let resultsPerPage = calculateResultsPerPage();
-let previousResults = []; // Almacenamos los resultados previos
+let previousResults = []; 
 const maxVisiblePages = 4;
 
 window.addEventListener('resize', () => {
